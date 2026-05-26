@@ -1,0 +1,9 @@
+<webscript>
+    <shortname>Get Smart Folder Template</shortname>
+    <description>Returns a single template including its JSON content</description>
+    <url>/hyland/smartfolders/templates/{storeType}/{storeId}/{nodeId}</url>
+    <format default="json">extension</format>
+    <authentication>admin</authentication>
+    <transaction allow="readonly">required</transaction>
+    <family>Hyland Smart Folder Manager</family>
+</webscript>

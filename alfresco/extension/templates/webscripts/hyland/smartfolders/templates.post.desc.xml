@@ -1,0 +1,9 @@
+<webscript>
+    <shortname>Create Smart Folder Template</shortname>
+    <description>Creates a new versioned smart folder template in the Data Dictionary</description>
+    <url>/hyland/smartfolders/templates</url>
+    <format default="json">extension</format>
+    <authentication>admin</authentication>
+    <transaction>required</transaction>
+    <family>Hyland Smart Folder Manager</family>
+</webscript>

@@ -1,0 +1,9 @@
+<webscript>
+    <shortname>List Class Properties</shortname>
+    <description>Returns all properties for a given type or aspect QName</description>
+    <url>/hyland/smartfolders/classes/{prefix}/{localName}/properties</url>
+    <format default="json">extension</format>
+    <authentication>admin</authentication>
+    <transaction allow="readonly">required</transaction>
+    <family>Hyland Smart Folder Manager</family>
+</webscript>

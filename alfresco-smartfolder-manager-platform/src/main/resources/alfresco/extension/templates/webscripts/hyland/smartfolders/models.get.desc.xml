@@ -1,0 +1,9 @@
+<webscript>
+    <shortname>List Content Models</shortname>
+    <description>Returns all non-system deployed content models</description>
+    <url>/hyland/smartfolders/models</url>
+    <format default="json">extension</format>
+    <authentication>admin</authentication>
+    <transaction allow="readonly">required</transaction>
+    <family>Hyland Smart Folder Manager</family>
+</webscript>

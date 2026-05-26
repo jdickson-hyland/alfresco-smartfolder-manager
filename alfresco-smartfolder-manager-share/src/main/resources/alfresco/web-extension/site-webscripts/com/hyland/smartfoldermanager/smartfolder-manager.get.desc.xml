@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<webscript>
+    <shortname>Smart Folder Manager</shortname>
+    <description>Admin UI for creating and managing Smart Folder Templates</description>
+    <url>/hyland/smartfoldermanager</url>
+    <authentication>admin</authentication>
+    <family>admin-console</family>
+</webscript>

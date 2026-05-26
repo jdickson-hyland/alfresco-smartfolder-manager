@@ -1,0 +1,9 @@
+<webscript>
+    <shortname>Delete Smart Folder Template</shortname>
+    <description>Permanently deletes a smart folder template</description>
+    <url>/hyland/smartfolders/templates/{storeType}/{storeId}/{nodeId}</url>
+    <format default="json">extension</format>
+    <authentication>admin</authentication>
+    <transaction>required</transaction>
+    <family>Hyland Smart Folder Manager</family>
+</webscript>

@@ -1,0 +1,9 @@
+<webscript>
+    <shortname>Undeploy Smart Folder Template</shortname>
+    <description>Reverts template node type from smf:smartFolderTemplate back to cm:content</description>
+    <url>/hyland/smartfolders/templates/{storeType}/{storeId}/{nodeId}/undeploy</url>
+    <format default="json">extension</format>
+    <authentication>admin</authentication>
+    <transaction>required</transaction>
+    <family>Hyland Smart Folder Manager</family>
+</webscript>

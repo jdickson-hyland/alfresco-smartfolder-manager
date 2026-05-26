@@ -1,0 +1,9 @@
+<webscript>
+    <shortname>Validate Template JSON</shortname>
+    <description>Validates the structure and FTS query syntax of a smart folder template JSON</description>
+    <url>/hyland/smartfolders/validate</url>
+    <format default="json">extension</format>
+    <authentication>admin</authentication>
+    <transaction>none</transaction>
+    <family>Hyland Smart Folder Manager</family>
+</webscript>

@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xargs -I{} sh -c 'jar tf {} 2>/dev/null | grep -i \"smartfold\" && echo {} || true')",
+      "Bash(xargs cat)",
+      "Bash(curl -s -u admin:admin \"http://localhost:8080/alfresco/api/-default-/public/alfresco/versions/1/nodes/c7ed9649-e131-4e37-ad96-49e131de37a1?include=properties,aspectNames\" -H \"Accept: application/json\")",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('type:', d.get\\('entry',{}\\).get\\('nodeType'\\)\\); print\\('aspects:', d.get\\('entry',{}\\).get\\('aspectNames',[]\\)\\); print\\('name:', d.get\\('entry',{}\\).get\\('name'\\)\\)\")",
+      "Bash(curl -s -u admin:admin -X POST \"http://localhost:8080/alfresco/s/hyland/smartfolders/templates/workspace/SpacesStore/c7ed9649-e131-4e37-ad96-49e131de37a1/deploy\" -H \"Content-Type: application/json\")",
+      "Bash(curl -s -o /dev/null -u admin:admin \"http://localhost:8080/alfresco/s/hyland/smartfolders/templates\" -w \"%{http_code}\")",
+      "Bash(curl -s -u admin:admin \"http://localhost:8080/alfresco/s/hyland/smartfolders/templates\")",
+      "Bash(curl -s -u admin:admin -X POST \"http://localhost:8080/alfresco/s/hyland/smartfolders/templates/workspace/SpacesStore/c7ed9649-e131-4e37-ad96-49e111de37a1/undeploy\" -H \"Content-Type: application/json\" -w \"\\\\nHTTP %{http_code}\")",
+      "Bash(curl -s -u admin:admin -X POST \"http://localhost:8080/alfresco/s/hyland/smartfolders/templates/workspace/SpacesStore/c7ed9649-e131-4e37-ad96-49e131de37a1/undeploy\" -H \"Content-Type: application/json\" -w \"\\\\nHTTP %{http_code}\")"
+    ]
+  }
+}

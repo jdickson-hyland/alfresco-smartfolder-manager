@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  This is the JRebel configuration file. It maps the running application to your IDE workspace, enabling JRebel reloading for this project.
+  Refer to https://manuals.zeroturnaround.com/jrebel/standalone/config.html for more information.
+-->
+<application generated-by="maven" build-tool-version="3.9.9" plugin-version="1.1.8" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.zeroturnaround.com" xsi:schemaLocation="http://www.zeroturnaround.com http://update.zeroturnaround.com/jrebel/rebel-2_2.xsd">
+	<classpath fallback="all">
+		<dir name="/Users/james.dickson/projects/alfresco/alfresco-smartfolder-manager/alfresco-smartfolder-manager-platform/target/classes">
+		</dir>
+		<dir name="/Users/james.dickson/projects/alfresco/alfresco-smartfolder-manager/alfresco-smartfolder-manager-platform/target/test-classes">
+		</dir>
+	</classpath>
+
+</application>

@@ -1,0 +1,10 @@
+<alfresco-config>
+    <config evaluator="string-compare" condition="AdminConsole">
+        <tools>
+            <tool id="smartfolder-manager"
+                  label="Smart Folder Manager"
+                  description="Create and manage Smart Folder Templates"
+                  url="/page/hdp/ws/hyland/smartfoldermanager"/>
+        </tools>
+    </config>
+</alfresco-config>

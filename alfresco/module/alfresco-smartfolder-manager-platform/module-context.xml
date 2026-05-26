@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <!-- bootstrap-context.xml must be first so the content model is registered
+         before service beans that reference sfmgr: QNames are instantiated. -->
+    <import resource="classpath:alfresco/module/alfresco-smartfolder-manager-platform/context/bootstrap-context.xml" />
+    <import resource="classpath:alfresco/module/alfresco-smartfolder-manager-platform/context/smartfoldermanager-context.xml" />
+
+</beans>

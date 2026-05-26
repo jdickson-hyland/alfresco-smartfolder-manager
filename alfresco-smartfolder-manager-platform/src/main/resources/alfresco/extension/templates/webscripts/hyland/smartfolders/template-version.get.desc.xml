@@ -1,0 +1,9 @@
+<webscript>
+    <shortname>Get Template Version</shortname>
+    <description>Returns the JSON content of a specific historical version of a template</description>
+    <url>/hyland/smartfolders/templates/{storeType}/{storeId}/{nodeId}/versions/{label}</url>
+    <format default="json">extension</format>
+    <authentication>admin</authentication>
+    <transaction allow="readonly">required</transaction>
+    <family>Hyland Smart Folder Manager</family>
+</webscript>

@@ -1,0 +1,9 @@
+<webscript>
+    <shortname>Deploy Smart Folder Template</shortname>
+    <description>Changes template node type to smf:smartFolderTemplate to activate it</description>
+    <url>/hyland/smartfolders/templates/{storeType}/{storeId}/{nodeId}/deploy</url>
+    <format default="json">extension</format>
+    <authentication>admin</authentication>
+    <transaction>required</transaction>
+    <family>Hyland Smart Folder Manager</family>
+</webscript>

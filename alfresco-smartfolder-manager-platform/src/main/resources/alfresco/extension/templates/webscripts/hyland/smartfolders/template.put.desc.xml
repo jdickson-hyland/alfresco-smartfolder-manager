@@ -1,0 +1,9 @@
+<webscript>
+    <shortname>Update Smart Folder Template</shortname>
+    <description>Updates an existing template, creating a new version</description>
+    <url>/hyland/smartfolders/templates/{storeType}/{storeId}/{nodeId}</url>
+    <format default="json">extension</format>
+    <authentication>admin</authentication>
+    <transaction>required</transaction>
+    <family>Hyland Smart Folder Manager</family>
+</webscript>

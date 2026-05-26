@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="sfmgr:smartFolderManagerModel"
+       xmlns="http://www.alfresco.org/model/dictionary/1.0">
+
+    <description>Hyland Smart Folder Manager Content Model</description>
+    <author>Hyland</author>
+    <version>1.0</version>
+
+    <imports>
+        <import uri="http://www.alfresco.org/model/dictionary/1.0" prefix="d"/>
+        <import uri="http://www.alfresco.org/model/content/1.0"    prefix="cm"/>
+    </imports>
+
+    <namespaces>
+        <namespace uri="http://www.hyland.com/model/smartfoldermanager/1.0" prefix="sfmgr"/>
+    </namespaces>
+
+    <aspects>
+        <aspect name="sfmgr:templateMetadata">
+            <title>Smart Folder Manager Template Metadata</title>
+            <description>Applied to smart folder template nodes to track deployment state</description>
+            <properties>
+                <property name="sfmgr:associatedType">
+                    <title>Associated Content Type</title>
+                    <description>The primary content type this template is designed for, e.g. cm:content</description>
+                    <type>d:text</type>
+                    <mandatory>false</mandatory>
+                </property>
+                <property name="sfmgr:deployed">
+                    <title>Deployed</title>
+                    <description>Whether this template has been activated as a smart folder template</description>
+                    <type>d:boolean</type>
+                    <mandatory>false</mandatory>
+                    <default>false</default>
+                </property>
+            </properties>
+        </aspect>
+    </aspects>
+
+</model>
