@@ -3,15 +3,6 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
                 http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
-   
-   <!--
-    Define beans related to this Share extension here, such as
-     evaluators and resource bootstrapping.
-
-     Note. Any configuration related to the whole Share.war webapp
-           (i.e. not specific to this share extension) should be
-            placed in the alfresco-allinone/share/src/main/resources/alfresco/web-extension/custom-slingshot-application-context.xml file
-   -->
 
    <!-- Add module specific messages and labels -->
    <bean id="com.hyland.alfresco.smartfoldermanager.alfresco-smartfolder-manager-share.resources"
@@ -21,6 +12,53 @@
             <value>alfresco.web-extension.messages.alfresco-smartfolder-manager-share</value>
          </list>
       </property>
+   </bean>
+
+   <!-- Override webframework.configsource to load share-config-smartfolder-manager.xml.
+        Preserves all sources from slingshot-application-context.xml (Share 25.1.0.56)
+        and appends the module-specific config as the last entry. -->
+   <bean id="webframework.configsource" class="org.springframework.extensions.config.source.UrlConfigSource">
+      <constructor-arg>
+         <list>
+            <!-- Spring Web Scripts -->
+            <value>classpath:org/springframework/extensions/webscripts/spring-webscripts-config.xml</value>
+            <value>classpath:META-INF/spring-webscripts-config-custom.xml</value>
+            <value>jar:*!/META-INF/spring-webscripts-config-custom.xml</value>
+            <!-- Spring Surf -->
+            <value>classpath:org/springframework/extensions/surf/spring-surf-config.xml</value>
+            <value>classpath:org/springframework/extensions/surf/spring-surf-config-remote.xml</value>
+            <value>classpath:META-INF/spring-surf-config-custom.xml</value>
+            <value>jar:*!/META-INF/spring-surf-config-custom.xml</value>
+            <!-- Surf Autowire Support -->
+            <value>webapp:WEB-INF/surf.xml</value>
+            <!-- Common form config -->
+            <value>classpath:alfresco/form-config.xml</value>
+            <!-- Share default config -->
+            <value>classpath:alfresco/share-config.xml</value>
+            <!-- Share form config -->
+            <value>classpath:alfresco/share-form-config.xml</value>
+            <!-- Share Document Library config -->
+            <value>classpath:alfresco/share-documentlibrary-config.xml</value>
+            <!-- Share Data List form config -->
+            <value>classpath:alfresco/share-datalist-form-config.xml</value>
+            <!-- Share workflow form config -->
+            <value>classpath:alfresco/share-workflow-form-config.xml</value>
+            <!-- Share CMIS config -->
+            <value>classpath:alfresco/share-cmis-config.xml</value>
+            <!-- Share Security config -->
+            <value>classpath:alfresco/share-security-config.xml</value>
+            <!-- Share CMM config -->
+            <value>classpath:alfresco/share-cmm-config.xml</value>
+            <!-- Share custom config -->
+            <value>classpath:alfresco/web-extension/share-config-custom.xml</value>
+            <value>jar:*!/META-INF/share-config-custom.xml</value>
+            <value>classpath:alfresco/web-extension/share-config-custom-dev.xml</value>
+            <value>jar:*!/META-INF/share-config-custom-dev.xml</value>
+            <value>classpath:alfresco/web-extension/smartfolders-amp-actions-config.xml</value>
+            <!-- Smart Folder Manager module config -->
+            <value>classpath:alfresco/web-extension/share-config-smartfolder-manager.xml</value>
+         </list>
+      </constructor-arg>
    </bean>
 
 </beans>
